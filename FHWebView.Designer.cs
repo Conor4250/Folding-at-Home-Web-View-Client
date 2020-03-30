@@ -37,7 +37,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 864);
             this.Name = "FHWebView";
-            this.Text = "Folding@Home Web Viewer";
+            this.Text = "Folding@Home Web View Client";
             this.Load += new System.EventHandler(this.FHWebView_Load);
             this.ResumeLayout(false);
 
