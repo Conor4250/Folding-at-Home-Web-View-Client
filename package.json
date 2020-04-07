@@ -1,19 +1,28 @@
 {
   "name": "foldingathome-web-view-client",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A client for viewing web view as it's bugged in chrome",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "keywords": [],
   "author": "Conor4250",
   "license": "ISC",
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.50",
+    "@electron-forge/maker-deb": "^6.0.0-beta.50",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.50",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
+    "@electron-forge/maker-zip": "^6.0.0-beta.50",
     "electron": "^8.2.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Conor4250/Folding-at-Home-Web-View-Client.git"
@@ -21,5 +30,33 @@
   "bugs": {
     "url": "https://github.com/Conor4250/Folding-at-Home-Web-View-Client/issues"
   },
-  "homepage": "https://github.com/Conor4250/Folding-at-Home-Web-View-Client#readme"
+  "homepage": "https://github.com/Conor4250/Folding-at-Home-Web-View-Client#readme",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "Folding-At-Home-Web-View-Client",
+            "title": "Folding@Home Web View Client",
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
 }
