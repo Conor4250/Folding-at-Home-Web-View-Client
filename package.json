@@ -39,7 +39,7 @@
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "Folding-At-Home-Web-View-Client",
-            "title": "Folding@Home Web View Client",
+            "title": "Folding@Home Web View Client"
           }
         },
         {
